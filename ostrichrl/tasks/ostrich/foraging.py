@@ -95,11 +95,11 @@ class Task(base.Task):
         self.distance = np.sqrt(((target_site - beak_site) ** 2).sum())
         return -self.distance
 
-    def get_termination(self, physics):
-        # The last pose is used to initialize the next episode.
-        self.prev_pos = physics.data.qpos.copy()
-        if self.distance <= self.threshold:
-            return 1
+    # def get_termination(self, physics):
+    #     # The last pose is used to initialize the next episode.
+    #     self.prev_pos = physics.data.qpos.copy()
+    #     if self.distance <= self.threshold:
+    #         return 1
 
     def get_observation(self, physics):
         obs = collections.OrderedDict()

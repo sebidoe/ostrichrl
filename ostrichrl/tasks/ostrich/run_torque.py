@@ -57,11 +57,11 @@ class RunTorque(base.Task):
     def get_reward(self, physics):
         return physics.horizontal_velocity()
 
-    def get_termination(self, physics):
-        if physics.pelvis_height() < 0.6:
-            return 1
-        if physics.torso_angle() < -0.8 or physics.torso_angle() > 0.8:
-            return 1
+    # def get_termination(self, physics):
+    #     if physics.pelvis_height() < 0.6:
+    #         return 1
+    #     if physics.torso_angle() < -0.8 or physics.torso_angle() > 0.8:
+    #         return 1
 
 
 @SUITE.add('benchmarking')

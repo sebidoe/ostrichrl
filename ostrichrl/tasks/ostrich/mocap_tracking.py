@@ -144,12 +144,12 @@ class MoCapTask(base.Task):
     def get_reward(self, physics):
         return self._reward
 
-    def get_termination(self, physics):
-        if self._reward < self._rew_threshold and not self._test:
-            return 1
+    # def get_termination(self, physics):
+    #     if self._reward < self._rew_threshold and not self._test:
+    #         return 1
 
-        if self._mocap_index + 1 >= self._clip_length:
-            return 1
+    #     if self._mocap_index + 1 >= self._clip_length:
+    #         return 1
 
 
 @SUITE.add('benchmarking')
